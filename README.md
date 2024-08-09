@@ -1,1 +1,1 @@
-# PyDocTrack
+PyDocTrack is a Flask-based web application designed to streamline the management of documents. It provides users with an intuitive interface for tracking, adding, and viewing documents. Whether you're managing personal documents or collaborating on a team project, PyDocTrack simplifies document organization through a user-friendly web interface, ensuring your documents are easily accessible and efficiently managed.
