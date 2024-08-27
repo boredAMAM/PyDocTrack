@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Viewer</title>
+</head>
+<body>
+    <div id="document-content">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="document-list.html">Back to Document List</a></li>
+            <li><a href="edit-document.html?doc=DOCUMENT_ID">Edit Document</a></li>
+        </ul>
+    </nav>
+    <script>
+        const apiUrl = process.env.API_URL;
+        const documentId = 'someDocumentId';
+        fetch(`${apiUrl}/documents/${documentId}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('document-content').innerText = data.content;
+            })
+            .catch(error => console.error('Error fetching document:', error));
+    </script>
+</body>
+</html>
